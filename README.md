@@ -43,10 +43,10 @@ retinal-dystrophy-research-trends/
 
 | 단계 | 내용 | 상태 |
 |------|------|------|
-| 1단계 | PubMed API 데이터 수집 | ✅ 완료 |
-| 2단계 | Pandas 기반 데이터 분석 (연도·유전자·치료법 빈도) | ⬜ 예정 |
-| 3단계 | Matplotlib / Plotly 시각화 | ⬜ 예정 |
-| 4단계 | GitHub Pages 배포 + 논문 번역본 게시 | ⬜ 예정 |
+| 1단계 | PubMed API 데이터 수집 (`src/fetch_pubmed.py`) | ✅ 완료 |
+| 2단계 | Pandas 기반 데이터 분석 (`src/analyze.py`) | ✅ 완료 |
+| 3단계 | Plotly 인터랙티브 시각화 (`src/visualize.py`) | ✅ 완료 |
+| 4단계 | GitHub Pages 대시보드 (`docs/`) | ✅ 완료 |
 
 ---
 
@@ -90,6 +90,38 @@ python src/fetch_pubmed.py --query cone_dystrophy
 `keywords`(MeSH + 저자 키워드), `query_labels`.
 
 ---
+
+### 4. 전체 파이프라인 실행 & 웹 페이지
+
+```bash
+python src/fetch_pubmed.py      # 1단계: 수집  -> data/raw/
+python src/analyze.py           # 2단계: 분석  -> data/processed/
+python src/visualize.py         # 3단계: 차트  -> docs/charts/, docs/assets/
+
+# 4단계: 로컬 미리보기
+python -m http.server 8000 --directory docs
+# 브라우저에서 http://localhost:8000 열기
+```
+
+### GitHub Pages 배포
+
+1. 이 저장소를 GitHub에 push 합니다.
+2. 저장소 **Settings → Pages** 로 이동합니다.
+3. **Source**를 `Deploy from a branch`, **Branch**를 `main` / **`/docs`** 폴더로 지정합니다.
+4. 잠시 후 `https://<사용자명>.github.io/retinal-dystrophy-research-trends/` 에서 공개됩니다.
+
+`docs/` 안에 정적 사이트가 모두 들어 있습니다.
+
+```
+docs/
+├── index.html                  # 대시보드 (히어로 + 인터랙티브 차트 5종)
+├── about-cone-dystrophy.html    # 추체이영양증 기초 개념 설명
+├── paper/index.html             # 논문 한국어 번역 (CC BY 표기)
+├── paper/source/                # 원문 PDF를 두는 곳
+├── charts/                      # Plotly 인터랙티브 차트 HTML
+├── assets/                      # 워드클라우드 등 이미지
+└── style.css
+```
 
 ## 데이터 출처 및 라이선스
 

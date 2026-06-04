@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inherited Retinal Dystrophy Research Landscape — 유전성 망막이영양증 연구 동향</title>
+  <meta name="description" content="PubMed 4,638편 메타데이터로 분석한 유전성 망막이영양증 연구 동향. 연도별 추이, 유전자, 치료법, 키워드 인터랙티브 시각화." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">🔬 IRD Research Landscape</a>
+      <div class="nav-links">
+        <a href="#dashboard">대시보드</a>
+        <a href="about-cone-dystrophy.html">기초 개념</a>
+        <a href="paper/index.html">논문 번역</a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="subtitle">유전성 망막이영양증 연구 동향 문헌 분석</p>
+    <h1>Inherited Retinal Dystrophy<br />Research Landscape</h1>
+    <p class="desc">
+      추체이영양증(cone dystrophy)을 포함한 유전성 망막이영양증 분야의 PubMed
+      논문 <strong>4,638편</strong>을 수집·분석하여, 연구가 어디로 향하고 있는지
+      한눈에 보여줍니다.
+    </p>
+  </header>
+
+  <section class="stats" aria-label="핵심 수치">
+    <div class="stat"><div class="num">4,638</div><div class="label">분석한 논문 수</div></div>
+    <div class="stat"><div class="num">2000–2026</div><div class="label">발행 연도 범위</div></div>
+    <div class="stat"><div class="num">RPE65</div><div class="label">최다 언급 유전자</div></div>
+    <div class="stat"><div class="num">46%</div><div class="label">유전자치료 연구 비중</div></div>
+    <div class="stat"><div class="num">812</div><div class="label">게재 저널 수</div></div>
+  </section>
+
+  <main id="dashboard">
+
+    <section class="section">
+      <h2>연도별 연구 동향</h2>
+      <p class="lead">
+        유전성 망막이영양증 연구는 2000년대 이후 꾸준히 증가해 왔으며, 특히 최근
+        5년간 가파른 성장세를 보입니다.
+      </p>
+      <div class="chart-card">
+        <iframe src="charts/yearly_trend.html" height="460" title="연도별 논문 발행 추이" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>치료 방법의 지형</h2>
+      <p class="lead">
+        어떤 치료 전략이 연구를 주도하고 있을까요? 전체 논문의 절반 가까이가
+        유전자치료를 다루며, 이 분야의 무게중심을 보여줍니다.
+      </p>
+      <div class="insight">
+        <strong>핵심 발견 ·</strong> 분석한 4,638편 중 <strong>2,124편(약 46%)</strong>이
+        유전자치료를 다룹니다. RPE65를 표적으로 한 최초의 FDA 승인 망막 유전자치료제
+        (Luxturna, 2017)의 등장이 이 흐름을 상징적으로 보여줍니다.
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <iframe src="charts/treatment_totals.html" height="420" title="치료 방법별 연구 비중" loading="lazy"></iframe>
+        </div>
+        <div class="chart-card">
+          <iframe src="charts/treatment_over_time.html" height="420" title="치료 방법별 연도별 동향" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>가장 많이 연구된 유전자</h2>
+      <p class="lead">
+        유전성 망막이영양증은 270개 이상의 유전자와 연관됩니다. 그중 연구가 집중된
+        유전자 상위권은 치료제 개발이 활발한 표적들과 일치합니다.
+      </p>
+      <div class="chart-card">
+        <iframe src="charts/gene_mentions.html" height="520" title="가장 많이 언급된 유전자" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>연구 키워드 지형</h2>
+      <p class="lead">
+        논문의 MeSH 표제어와 저자 키워드를 모아 만든 워드클라우드입니다. Retina,
+        Mutation, Genetic Therapy가 중심을 차지합니다.
+      </p>
+      <div class="chart-card wordcloud-card">
+        <img src="assets/keyword_wordcloud.png" alt="연구 키워드 워드클라우드" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>주요 게재 저널</h2>
+      <p class="lead">이 분야 연구가 가장 많이 발표되는 저널들입니다.</p>
+      <div class="chart-card">
+        <iframe src="charts/top_journals.html" height="460" title="주요 저널" loading="lazy"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>
+      데이터 출처: <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a> /
+      NCBI Entrez E-utilities · 분석 시점 2026년 6월
+    </p>
+    <p>
+      이 페이지는 교육·연구 목적의 문헌 분석 프로젝트입니다. ·
+      <a href="about-cone-dystrophy.html">추체이영양증이란?</a> ·
+      <a href="paper/index.html">논문 한국어 번역</a>
+    </p>
+  </footer>
+
+</body>
+</html>

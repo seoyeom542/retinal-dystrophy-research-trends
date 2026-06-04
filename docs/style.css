@@ -1,0 +1,191 @@
+/* Inherited Retinal Dystrophy Research Landscape — shared styles
+   Calm clinical palette: deep navy/teal with warm accent. */
+
+:root {
+  --navy: #022b3a;
+  --teal: #1f7a8c;
+  --teal-light: #bfd7ea;
+  --accent: #e1701a;
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --text: #1a2b34;
+  --muted: #5b6b75;
+  --border: #e2e8ee;
+  --radius: 14px;
+  --shadow: 0 1px 3px rgba(2, 43, 58, 0.06), 0 8px 24px rgba(2, 43, 58, 0.05);
+  --maxw: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--teal); }
+
+/* --- Top navigation --- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand { font-weight: 700; color: var(--navy); text-decoration: none; font-size: 0.98rem; }
+.nav-links { display: flex; gap: 22px; }
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.nav-links a:hover { color: var(--teal); }
+
+/* --- Hero --- */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+  color: white;
+  padding: 72px 24px 64px;
+  text-align: center;
+}
+.hero h1 {
+  max-width: 820px;
+  margin: 0 auto 8px;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.hero .subtitle { font-size: 1.05rem; opacity: 0.9; margin: 0 0 6px; }
+.hero .desc { max-width: 640px; margin: 18px auto 0; opacity: 0.85; font-size: 0.97rem; }
+
+/* --- Stat cards --- */
+.stats {
+  max-width: var(--maxw);
+  margin: -40px auto 0;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+.stat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 20px;
+  text-align: center;
+}
+.stat .num { font-size: 1.9rem; font-weight: 700; color: var(--teal); line-height: 1.1; }
+.stat .label { font-size: 0.82rem; color: var(--muted); margin-top: 6px; }
+
+/* --- Sections --- */
+.section { max-width: var(--maxw); margin: 0 auto; padding: 56px 24px 0; }
+.section h2 {
+  font-size: 1.45rem;
+  color: var(--navy);
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.section .lead { color: var(--muted); margin: 0 0 24px; font-size: 0.97rem; }
+
+/* --- Chart cards --- */
+.chart-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.chart-card iframe { width: 100%; border: 0; display: block; }
+.chart-note { padding: 0 24px 18px; color: var(--muted); font-size: 0.88rem; }
+
+.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+@media (max-width: 760px) { .chart-grid { grid-template-columns: 1fr; } }
+
+.wordcloud-card img { width: 100%; display: block; }
+
+/* --- Insight callout --- */
+.insight {
+  background: linear-gradient(135deg, #fff8f3, #fef2e8);
+  border: 1px solid #f6d9c3;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+}
+.insight strong { color: var(--accent); }
+
+/* --- Article / content pages --- */
+.article { max-width: 760px; margin: 0 auto; padding: 48px 24px 0; }
+.article h1 { color: var(--navy); font-size: 1.9rem; line-height: 1.3; }
+.article h2 { color: var(--navy); margin-top: 36px; }
+.article h3 { color: var(--teal); }
+.article p, .article li { font-size: 1rem; }
+.article .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 8px; }
+.article table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; }
+.article th, .article td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
+.article th { background: var(--teal-light); color: var(--navy); }
+
+/* --- License / citation box --- */
+.license {
+  background: #f0f6f9;
+  border: 1px solid var(--teal-light);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 24px 0;
+}
+.license .badge {
+  display: inline-block;
+  background: var(--teal);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+/* --- Placeholder banner --- */
+.placeholder {
+  background: #fffbe9;
+  border: 1px dashed #e0c873;
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  color: #7a6411;
+  font-size: 0.92rem;
+  margin: 24px 0;
+}
+
+/* --- Footer --- */
+.footer {
+  max-width: var(--maxw);
+  margin: 64px auto 0;
+  padding: 28px 24px 48px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+.footer a { color: var(--teal); }
