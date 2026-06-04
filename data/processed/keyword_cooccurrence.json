@@ -1,0 +1,152 @@
+[
+  {
+    "source": "Genetic Therapy",
+    "target": "Genetic Vectors",
+    "weight": 366
+  },
+  {
+    "source": "Dependovirus",
+    "target": "Genetic Therapy",
+    "weight": 340
+  },
+  {
+    "source": "Genetic Therapy",
+    "target": "Retina",
+    "weight": 326
+  },
+  {
+    "source": "Dependovirus",
+    "target": "Genetic Vectors",
+    "weight": 322
+  },
+  {
+    "source": "Electroretinography",
+    "target": "Tomography, Optical Coherence",
+    "weight": 306
+  },
+  {
+    "source": "Tomography, Optical Coherence",
+    "target": "Visual Acuity",
+    "weight": 280
+  },
+  {
+    "source": "Mice",
+    "target": "Retina",
+    "weight": 256
+  },
+  {
+    "source": "Genetic Therapy",
+    "target": "Mice",
+    "weight": 255
+  },
+  {
+    "source": "Disease Models, Animal",
+    "target": "Mice",
+    "weight": 247
+  },
+  {
+    "source": "Electroretinography",
+    "target": "Visual Acuity",
+    "weight": 234
+  },
+  {
+    "source": "Genetic Therapy",
+    "target": "gene therapy",
+    "weight": 210
+  },
+  {
+    "source": "Disease Models, Animal",
+    "target": "Genetic Therapy",
+    "weight": 206
+  },
+  {
+    "source": "Color Vision",
+    "target": "Color Vision Defects",
+    "weight": 199
+  },
+  {
+    "source": "Genetic Vectors",
+    "target": "Retina",
+    "weight": 192
+  },
+  {
+    "source": "Color Vision Defects",
+    "target": "Retinal Cone Photoreceptor Cells",
+    "weight": 190
+  },
+  {
+    "source": "Dependovirus",
+    "target": "Retina",
+    "weight": 190
+  },
+  {
+    "source": "Dependovirus",
+    "target": "Mice",
+    "weight": 189
+  },
+  {
+    "source": "Electroretinography",
+    "target": "Retina",
+    "weight": 185
+  },
+  {
+    "source": "Color Perception Tests",
+    "target": "Color Vision Defects",
+    "weight": 184
+  },
+  {
+    "source": "Electroretinography",
+    "target": "Retinitis Pigmentosa",
+    "weight": 181
+  },
+  {
+    "source": "Eye Proteins",
+    "target": "Retinitis Pigmentosa",
+    "weight": 173
+  },
+  {
+    "source": "Retina",
+    "target": "Retinal Degeneration",
+    "weight": 171
+  },
+  {
+    "source": "Color Perception",
+    "target": "Color Vision Defects",
+    "weight": 169
+  },
+  {
+    "source": "Retina",
+    "target": "Retinal Diseases",
+    "weight": 165
+  },
+  {
+    "source": "Mice",
+    "target": "Mice, Inbred C57BL",
+    "weight": 165
+  },
+  {
+    "source": "Retina",
+    "target": "Tomography, Optical Coherence",
+    "weight": 163
+  },
+  {
+    "source": "Retina",
+    "target": "Retinitis Pigmentosa",
+    "weight": 162
+  },
+  {
+    "source": "Genetic Vectors",
+    "target": "Mice",
+    "weight": 160
+  },
+  {
+    "source": "Disease Models, Animal",
+    "target": "Retina",
+    "weight": 160
+  },
+  {
+    "source": "Fluorescein Angiography",
+    "target": "Tomography, Optical Coherence",
+    "weight": 154
+  }
+]

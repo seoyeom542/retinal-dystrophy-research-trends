@@ -19,3 +19,6 @@ data/raw/*.xml
 
 # OS
 .DS_Store
+
+# Fetch logs
+data/raw/*.log

@@ -1,0 +1,17 @@
+{
+  "total_records": 4638,
+  "year_range": [
+    2000,
+    2026
+  ],
+  "records_with_abstract": 4430,
+  "unique_journals": 812,
+  "top_gene": {
+    "name": "RPE65",
+    "count": 268
+  },
+  "top_treatment": {
+    "name": "Gene therapy",
+    "count": 2124
+  }
+}
