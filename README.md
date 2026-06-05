@@ -176,11 +176,24 @@ python src/build_trials_page.py   # 데이터를 임베드한 docs/clinical-tria
 IRD 관련 8개 질환 조건과 유전자치료 중재(intervention)를 교차 검색해 임상시험을
 수집하고, 상태별 필터링이 가능한 정적 페이지로 빌드합니다.
 
-## 데이터 출처 및 라이선스
+## 라이선스
 
-- **메타데이터**: [PubMed](https://pubmed.ncbi.nlm.nih.gov/) / NCBI Entrez
+| 대상 | 라이선스 |
+|------|----------|
+| 소스 코드 (`src/`, 빌드 도구) | **MIT** ([LICENSE](LICENSE)) |
+| 원본 글 콘텐츠 (`notes/`, 대시보드·설명 텍스트) | **CC BY 4.0** — 출처 표기 시 재사용 허용 |
+| 논문 번역 (`docs/paper/`) | 원문(BMJ)의 **CC BY 4.0** 유지, 원저자 표기 후 재배포 |
+
+자세한 범위는 [LICENSE](LICENSE) 파일을 참고하세요.
+
+## 데이터 출처
+
+- **문헌 메타데이터**: [PubMed](https://pubmed.ncbi.nlm.nih.gov/) / NCBI Entrez
   E-utilities. [NCBI 이용 약관](https://www.ncbi.nlm.nih.gov/home/about/policies/)을
   따릅니다.
-- 향후 게시될 논문 번역본은 각 논문의 라이선스를 개별 확인하여 게시합니다.
-  예: Gill JS, et al. *Br J Ophthalmol* 2019;103:711–720
-  (doi:10.1136/bjophthalmol-2018-313278) — **CC BY 4.0**, 출처 표기 후 번역·재배포 허용.
+- **임상시험**: [ClinicalTrials.gov](https://clinicaltrials.gov/) API v2.
+- **원문 논문**: Gill JS, et al. *Br J Ophthalmol* 2019;103:711–720
+  (doi:10.1136/bjophthalmol-2018-313278) — CC BY 4.0.
+
+> ℹ️ 이 저장소는 공개(public)이지만, 쓰기 권한은 소유자에게만 있습니다. 누구나
+> 보거나 포크할 수 있어도, 커밋·머지는 소유자만 가능합니다.
