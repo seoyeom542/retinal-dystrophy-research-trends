@@ -24,6 +24,11 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://seoyeom542.github.io/retinal-dystrophy-research-trends/notes/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <url>
     <loc>https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/</loc>

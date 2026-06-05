@@ -128,15 +128,43 @@ python -m http.server 8000 --directory docs
 
 ```
 docs/
-├── index.html                  # 대시보드 (히어로 + 인터랙티브 차트 5종)
+├── index.html                  # 대시보드 (히어로 + 인터랙티브 차트 7종)
+├── en/                          # 영문 미러 (대시보드·임상시험·기초개념)
 ├── clinical-trials.html         # 임상시험 현황 (ClinicalTrials.gov, 상태별 필터)
+├── notes/                       # 연구 노트 (notes/*.md 에서 생성)
 ├── about-cone-dystrophy.html    # 추체이영양증 기초 개념 설명
 ├── paper/index.html             # 논문 한국어 번역 (CC BY 표기)
 ├── paper/source/                # 원문 PDF를 두는 곳
-├── charts/                      # Plotly 인터랙티브 차트 HTML
+├── charts/{ko,en}/             # Plotly 인터랙티브 차트 HTML
 ├── assets/                      # 워드클라우드 등 이미지
+├── sitemap.xml · robots.txt     # 검색엔진 색인
 └── style.css
 ```
+
+### 연구 노트 추가 (개인 아카이브)
+
+공부하며 정리한 노트를 마크다운으로 쌓아 사이트에 게시할 수 있습니다.
+
+```bash
+# 1) notes/ 에 YYYY-MM-DD-제목.md 파일 작성 (머리말 + 마크다운 본문)
+# 2) HTML 생성
+python src/build_notes.py        # notes/*.md -> docs/notes/
+```
+
+머리말(frontmatter) 형식:
+
+```yaml
+---
+title: 노트 제목
+date: 2026-06-10
+tags: 태그1, 태그2
+lang: ko
+summary: 목록에 표시될 한 줄 요약.
+---
+```
+
+자세한 사용법은 [첫 노트](https://seoyeom542.github.io/retinal-dystrophy-research-trends/notes/)를
+참고하세요.
 
 ### 임상시험 데이터 갱신
 

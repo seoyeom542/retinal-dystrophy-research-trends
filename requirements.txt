@@ -13,3 +13,4 @@ wordcloud>=1.9
 # Utilities
 tqdm>=4.66              # progress bars for long fetches
 python-dotenv>=1.0      # load NCBI API key / email from .env
+markdown>=3.5           # render study notes (notes/*.md -> docs/notes/)

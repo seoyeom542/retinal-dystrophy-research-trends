@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연구 노트를 시작하며 — 이 아카이브 사용법 — 연구 노트</title>
+  <meta name="description" content="공부하면서 읽은 논문·개념을 이 아카이브에 노트로 쌓는 방법을 정리합니다." />
+  <link rel="canonical" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/notes/2026-06-05-welcome.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="연구 노트를 시작하며 — 이 아카이브 사용법" />
+  <meta property="og:description" content="공부하면서 읽은 논문·개념을 이 아카이브에 노트로 쌓는 방법을 정리합니다." />
+  <meta property="og:url" content="https://seoyeom542.github.io/retinal-dystrophy-research-trends/notes/2026-06-05-welcome.html" />
+  <meta property="og:image" content="https://seoyeom542.github.io/retinal-dystrophy-research-trends/assets/keyword_wordcloud.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="../index.html">🔬 IRD Research Landscape</a>
+      <div class="nav-links">
+        <a href="../index.html#dashboard">대시보드</a>
+        <a href="../clinical-trials.html">임상시험</a>
+        <a href="index.html">연구 노트</a>
+        <a href="../about-cone-dystrophy.html">기초 개념</a>
+        <a href="../paper/index.html">논문 번역</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <p class="meta">연구 노트 · 2026-06-05 · #안내 · #사용법</p>
+    <h1>연구 노트를 시작하며 — 이 아카이브 사용법</h1>
+<p>이 공간은 유전성 망막이영양증을 공부하면서 정리한 노트를 모아두는 <strong>개인 연구
+아카이브</strong>입니다. 논문 요약, 개념 정리, 실험 아이디어 등 무엇이든 자유롭게 쌓아
+갑니다.</p>
+<h2>노트를 추가하는 방법</h2>
+<p>새 노트는 마크다운 파일 하나만 만들면 됩니다.</p>
+<ol>
+<li><code>notes/</code> 폴더에 <code>YYYY-MM-DD-제목.md</code> 형식으로 파일을 만듭니다.</li>
+<li>파일 맨 위에 아래처럼 <strong>머리말(frontmatter)</strong> 을 적습니다.</li>
+<li><code>python src/build_notes.py</code> 를 실행하면 <code>docs/notes/</code> 에 HTML이 생성됩니다.</li>
+<li>커밋·push 하면 사이트에 올라갑니다.</li>
+</ol>
+<pre><code class="language-yaml">---
+title: 노트 제목
+date: 2026-06-10
+tags: 태그1, 태그2
+lang: ko
+summary: 목록에 표시될 한 줄 요약.
+---
+
+여기부터 마크다운 본문을 씁니다.
+</code></pre>
+<h2>마크다운으로 쓸 수 있는 것들</h2>
+<p>제목, 목록, <strong>굵게</strong>, <em>기울임</em>, <code>인라인 코드</code>, <a href="https://pubmed.ncbi.nlm.nih.gov/">링크</a>는
+물론, 표와 코드 블록, 인용도 됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>유전자</th>
+<th>연관 질환</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABCA4</td>
+<td>스타가르트병, CORD</td>
+<td>가장 흔한 IRD 원인</td>
+</tr>
+<tr>
+<td>RPE65</td>
+<td>LCA</td>
+<td>최초 FDA 승인 유전자치료 표적</td>
+</tr>
+<tr>
+<td>RPGR</td>
+<td>X-연관 RP/CORD</td>
+<td>ORF15 변이 호발</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>인용문도 이렇게 표시됩니다. 논문에서 인상 깊은 문장을 옮겨 적기 좋습니다.</p>
+</blockquote>
+<pre><code class="language-python"># 코드 블록도 문법 강조와 함께 렌더링됩니다.
+genes = [&quot;ABCA4&quot;, &quot;RPE65&quot;, &quot;RPGR&quot;]
+for g in genes:
+    print(g)
+</code></pre>
+<h2>이 아카이브를 쓰는 방식 (예시)</h2>
+<ul>
+<li><strong>논문을 읽으면</strong> → 핵심 요지·방법·결과를 노트로 요약</li>
+<li><strong>개념이 헷갈리면</strong> → 내 언어로 다시 정리한 설명 노트</li>
+<li><strong>아이디어가 떠오르면</strong> → 연구 가설·실험 설계 메모</li>
+</ul>
+<p>노트가 쌓이면 <a href="index.html">노트 목록</a>에서 최신순으로 모아 볼 수 있습니다. 본 프로젝트의
+<a href="../index.html">대시보드</a>·<a href="../paper/index.html">논문 번역</a>과 함께, 공부의 흐름이
+하나의 사이트에 기록됩니다.</p>
+  </article>
+
+  <footer class="footer">
+    <p><a href="index.html">← 연구 노트 목록</a> · <a href="../index.html">대시보드</a></p>
+    <p>개인 연구 아카이브 · 교육·연구 목적</p>
+    <p>문의 · <a href="mailto:seoyeom542@gmail.com">seoyeom542@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
