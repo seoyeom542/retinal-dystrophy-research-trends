@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://seoyeom542.github.io/retinal-dystrophy-research-trends/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://seoyeom542.github.io/retinal-dystrophy-research-trends/clinical-trials.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://seoyeom542.github.io/retinal-dystrophy-research-trends/about-cone-dystrophy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://seoyeom542.github.io/retinal-dystrophy-research-trends/paper/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/clinical-trials.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/about-cone-dystrophy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

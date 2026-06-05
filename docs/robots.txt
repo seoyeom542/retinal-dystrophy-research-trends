@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seoyeom542.github.io/retinal-dystrophy-research-trends/sitemap.xml

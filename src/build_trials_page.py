@@ -26,6 +26,18 @@ LANGS = {
         "html_lang": "ko",
         "title": "임상시험 현황 — IRD Research Landscape",
         "meta": "유전성 망막이영양증 유전자치료 임상시험 현황. ClinicalTrials.gov 데이터 기반 인터랙티브 목록.",
+        "head_extra": (
+            '  <link rel="canonical" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/clinical-trials.html" />\n'
+            '  <link rel="alternate" hreflang="ko" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/clinical-trials.html" />\n'
+            '  <link rel="alternate" hreflang="en" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/clinical-trials.html" />\n'
+            '  <meta property="og:type" content="website" />\n'
+            '  <meta property="og:locale" content="ko_KR" />\n'
+            '  <meta property="og:title" content="유전성 망막이영양증 유전자치료 임상시험 현황" />\n'
+            '  <meta property="og:description" content="ClinicalTrials.gov에 등록된 IRD 유전자치료 임상시험을 상태별로 정리한 인터랙티브 목록." />\n'
+            '  <meta property="og:url" content="https://seoyeom542.github.io/retinal-dystrophy-research-trends/clinical-trials.html" />\n'
+            '  <meta property="og:image" content="https://seoyeom542.github.io/retinal-dystrophy-research-trends/assets/keyword_wordcloud.png" />\n'
+            '  <meta name="twitter:card" content="summary_large_image" />'
+        ),
         "nav": {"dashboard": "대시보드", "trials": "임상시험", "basics": "기초 개념", "paper": "논문 번역"},
         "subtitle": "유전성 망막이영양증 유전자치료",
         "h1": "임상시험 현황",
@@ -56,6 +68,18 @@ LANGS = {
         "html_lang": "en",
         "title": "Clinical Trials — IRD Research Landscape",
         "meta": "Gene-therapy clinical trials for inherited retinal dystrophy. Interactive list built on ClinicalTrials.gov data.",
+        "head_extra": (
+            '  <link rel="canonical" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/clinical-trials.html" />\n'
+            '  <link rel="alternate" hreflang="en" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/clinical-trials.html" />\n'
+            '  <link rel="alternate" hreflang="ko" href="https://seoyeom542.github.io/retinal-dystrophy-research-trends/clinical-trials.html" />\n'
+            '  <meta property="og:type" content="website" />\n'
+            '  <meta property="og:locale" content="en_US" />\n'
+            '  <meta property="og:title" content="Gene-therapy clinical trials for inherited retinal dystrophy" />\n'
+            '  <meta property="og:description" content="An interactive, status-filterable list of IRD gene-therapy trials registered on ClinicalTrials.gov." />\n'
+            '  <meta property="og:url" content="https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/clinical-trials.html" />\n'
+            '  <meta property="og:image" content="https://seoyeom542.github.io/retinal-dystrophy-research-trends/assets/keyword_wordcloud.png" />\n'
+            '  <meta name="twitter:card" content="summary_large_image" />'
+        ),
         "nav": {"dashboard": "Dashboard", "trials": "Clinical trials", "basics": "Background", "paper": "Source paper"},
         "subtitle": "Gene therapy for inherited retinal dystrophy",
         "h1": "Clinical Trials",
@@ -87,6 +111,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content="{meta}" />
+{head_extra}
   <link rel="stylesheet" href="{root}style.css" />
 </head>
 <body>
@@ -228,6 +253,7 @@ def build(lang: str, L: dict, trials: list, summary: dict) -> None:
         html_lang=L["html_lang"],
         title=L["title"],
         meta=L["meta"],
+        head_extra=L["head_extra"],
         root=L["root"],
         nav_dashboard=L["nav"]["dashboard"],
         nav_trials=L["nav"]["trials"],
