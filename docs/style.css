@@ -59,6 +59,14 @@ a { color: var(--teal); }
   font-weight: 500;
 }
 .nav-links a:hover { color: var(--teal); }
+.lang-toggle {
+  border: 1px solid var(--teal);
+  border-radius: 999px;
+  padding: 3px 12px;
+  color: var(--teal) !important;
+  font-weight: 600;
+}
+.lang-toggle:hover { background: var(--teal); color: white !important; }
 
 /* --- Hero --- */
 .hero {

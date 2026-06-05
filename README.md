@@ -2,6 +2,19 @@
 
 **유전성 망막이영양증 연구 동향 문헌 분석**
 
+### 🔗 라이브 사이트 (Live site)
+
+**👉 <https://seoyeom542.github.io/retinal-dystrophy-research-trends/>** (한국어)
+· **[English](https://seoyeom542.github.io/retinal-dystrophy-research-trends/en/)**
+
+[![Live](https://img.shields.io/badge/GitHub%20Pages-Live-2a9d8f?style=flat-square)](https://seoyeom542.github.io/retinal-dystrophy-research-trends/)
+
+대시보드 · [임상시험 현황](https://seoyeom542.github.io/retinal-dystrophy-research-trends/clinical-trials.html) ·
+[추체이영양증 기초 개념](https://seoyeom542.github.io/retinal-dystrophy-research-trends/about-cone-dystrophy.html) ·
+[논문 한국어 번역](https://seoyeom542.github.io/retinal-dystrophy-research-trends/paper/)
+
+---
+
 PubMed 메타데이터로 추체이영양증(cone dystrophy)을 포함한 유전성 망막이영양증
 (inherited retinal dystrophy) 분야의 연구 동향을 수집·분석·시각화하고, 그 결과를
 일반인과 연구자 모두가 볼 수 있는 웹 페이지로 제공하는 프로젝트입니다.

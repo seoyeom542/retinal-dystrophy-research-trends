@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inherited Retinal Dystrophy Research Landscape</title>
+  <meta name="description" content="A literature analysis of inherited retinal dystrophy research, built on 4,638 PubMed records: yearly trends, genes, treatment modalities, and keyword landscape." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">🔬 IRD Research Landscape</a>
+      <div class="nav-links">
+        <a href="#dashboard">Dashboard</a>
+        <a href="clinical-trials.html">Clinical trials</a>
+        <a href="about-cone-dystrophy.html">Background</a>
+        <a href="https://doi.org/10.1136/bjophthalmol-2018-313278" target="_blank" rel="noopener">Source paper</a>
+        <a href="../index.html" class="lang-toggle">한국어</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="subtitle">A literature analysis of inherited retinal dystrophy research</p>
+    <h1>Inherited Retinal Dystrophy<br />Research Landscape</h1>
+    <p class="desc">
+      Built on <strong>4,638 PubMed records</strong> covering cone dystrophy and the
+      broader family of inherited retinal dystrophies — a one-glance view of where
+      the research is heading.
+    </p>
+  </header>
+
+  <section class="stats" aria-label="key figures">
+    <div class="stat"><div class="num">4,638</div><div class="label">Publications analysed</div></div>
+    <div class="stat"><div class="num">2000–2026</div><div class="label">Year range</div></div>
+    <div class="stat"><div class="num">RPE65</div><div class="label">Most-mentioned gene</div></div>
+    <div class="stat"><div class="num">46%</div><div class="label">Gene-therapy share</div></div>
+    <div class="stat"><div class="num">812</div><div class="label">Journals</div></div>
+  </section>
+
+  <main id="dashboard">
+
+    <section class="section">
+      <h2>Research trend over time</h2>
+      <p class="lead">
+        Research on inherited retinal dystrophies has grown steadily since the 2000s,
+        with especially sharp acceleration over the past five years.
+      </p>
+      <div class="chart-card">
+        <iframe src="../charts/en/yearly_trend.html" height="460" title="Publications per year" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The treatment landscape</h2>
+      <p class="lead">
+        Which therapeutic strategy is driving the field? Nearly half of all papers
+        address gene therapy, marking the centre of gravity of this research area.
+      </p>
+      <div class="insight">
+        <strong>Key finding ·</strong> Of the 4,638 papers analysed,
+        <strong>2,124 (≈46%)</strong> address gene therapy. The arrival of the first
+        FDA-approved retinal gene therapy targeting RPE65 (Luxturna, 2017) is emblematic
+        of this shift. The trend is already reaching patients —
+        <a href="clinical-trials.html"><strong>see the active gene-therapy clinical trials →</strong></a>
+      </div>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <iframe src="../charts/en/treatment_totals.html" height="420" title="Research volume by treatment modality" loading="lazy"></iframe>
+        </div>
+        <div class="chart-card">
+          <iframe src="../charts/en/treatment_over_time.html" height="420" title="Treatment modalities over time" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Most-studied genes</h2>
+      <p class="lead">
+        Inherited retinal dystrophies are linked to more than 270 genes. The most
+        heavily studied ones line up with the targets where therapy development is
+        most active.
+      </p>
+      <div class="chart-card">
+        <iframe src="../charts/en/gene_mentions.html" height="520" title="Most-mentioned genes" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Keyword landscape</h2>
+      <p class="lead">
+        A word cloud built from the MeSH headings and author keywords of the corpus.
+        Retina, Mutation, and Genetic Therapy sit at its centre.
+      </p>
+      <div class="chart-card wordcloud-card">
+        <img src="../assets/keyword_wordcloud.png" alt="Keyword word cloud" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Leading journals</h2>
+      <p class="lead">The journals where this research is most often published.</p>
+      <div class="chart-card">
+        <iframe src="../charts/en/top_journals.html" height="460" title="Leading journals" loading="lazy"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>
+      Data source: <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a> /
+      NCBI Entrez E-utilities · analysed June 2026
+    </p>
+    <p>
+      An educational / research literature-analysis project. ·
+      <a href="about-cone-dystrophy.html">What is cone dystrophy?</a> ·
+      <a href="clinical-trials.html">Clinical trials</a>
+    </p>
+    <p>Contact · <a href="mailto:seoyeom542@gmail.com">seoyeom542@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
