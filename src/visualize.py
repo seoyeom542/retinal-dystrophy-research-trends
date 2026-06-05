@@ -59,6 +59,12 @@ STRINGS: dict[str, dict[str, Any]] = {
         "journal_title": "주요 저널 Top {n}",
         "journal_x": "논문 수",
         "journal_hover": "<b>%{y}</b><br>논문 수: %{x}<extra></extra>",
+        "author_title": "가장 많이 출판한 저자 Top {n}",
+        "author_x": "논문 수",
+        "author_hover": "<b>%{y}</b><br>논문 수: %{x}<extra></extra>",
+        "inst_title": "가장 활발한 연구 기관 Top {n}",
+        "inst_x": "논문 수",
+        "inst_hover": "<b>%{y}</b><br>논문 수: %{x}<extra></extra>",
     },
     "en": {
         "queries": {
@@ -82,8 +88,17 @@ STRINGS: dict[str, dict[str, Any]] = {
         "journal_title": "Leading Journals (Top {n})",
         "journal_x": "Number of publications",
         "journal_hover": "<b>%{y}</b><br>Publications: %{x}<extra></extra>",
+        "author_title": "Most Prolific Authors (Top {n})",
+        "author_x": "Number of publications",
+        "author_hover": "<b>%{y}</b><br>Publications: %{x}<extra></extra>",
+        "inst_title": "Most Active Research Institutions (Top {n})",
+        "inst_x": "Number of publications",
+        "inst_hover": "<b>%{y}</b><br>Publications: %{x}<extra></extra>",
     },
 }
+
+# Author to spotlight (accent-coloured) in the author chart.
+HIGHLIGHT_AUTHOR = "Michaelides M"
 
 
 def _load(name: str) -> Any:
@@ -268,6 +283,63 @@ def chart_top_journals(lang: str, s: dict, top_n: int = 12) -> None:
     _save(fig, lang, "top_journals.html")
 
 
+def chart_top_authors(lang: str, s: dict, top_n: int = 12) -> None:
+    """Horizontal bar: most prolific authors, spotlighting one researcher."""
+    data = _load("author_analysis.json")
+    items = data["top_authors"][:top_n][::-1]  # reversed so #1 sits on top
+    names = [a["author"] for a in items]
+    counts = [a["papers"] for a in items]
+    # Accent colour for the spotlighted author, teal for everyone else.
+    colors = [PALETTE[2] if n == HIGHLIGHT_AUTHOR else PALETTE[0] for n in names]
+    fig = go.Figure(
+        go.Bar(
+            x=counts,
+            y=names,
+            orientation="h",
+            marker=dict(color=colors),
+            text=counts,
+            textposition="outside",
+            hovertemplate=s["author_hover"],
+        )
+    )
+    fig.update_layout(
+        **_base_layout(
+            s["author_title"].format(n=top_n),
+            xaxis_title=s["author_x"],
+            yaxis_title="",
+        )
+    )
+    _save(fig, lang, "top_authors.html")
+
+
+def chart_top_institutions(lang: str, s: dict, top_n: int = 10) -> None:
+    """Horizontal bar: most active institutions."""
+    data = _load("author_analysis.json")
+    items = data["top_institutions"][:top_n][::-1]
+    names = [i["institution"] for i in items]
+    counts = [i["papers"] for i in items]
+    fig = go.Figure(
+        go.Bar(
+            x=counts,
+            y=names,
+            orientation="h",
+            marker=dict(color=counts, colorscale="Teal", showscale=False),
+            text=counts,
+            textposition="outside",
+            hovertemplate=s["inst_hover"],
+        )
+    )
+    fig.update_layout(
+        **_base_layout(
+            s["inst_title"].format(n=top_n),
+            xaxis_title=s["inst_x"],
+            yaxis_title="",
+        ),
+        yaxis=dict(tickfont=dict(size=11)),
+    )
+    _save(fig, lang, "top_institutions.html")
+
+
 def make_wordcloud() -> None:
     """Render a keyword word cloud PNG (language-neutral) from raw keywords."""
     from wordcloud import WordCloud
@@ -312,6 +384,8 @@ def main() -> None:
         chart_treatment_totals(lang, s)
         chart_treatment_over_time(lang, s)
         chart_top_journals(lang, s)
+        chart_top_authors(lang, s)
+        chart_top_institutions(lang, s)
     print("Building language-neutral word cloud...")
     make_wordcloud()
     print("\nDone. Charts in docs/charts/<lang>/, word cloud in docs/assets/.")

@@ -1,0 +1,292 @@
+{
+  "top_authors": [
+    {
+      "rank": 1,
+      "author": "Michaelides M",
+      "papers": 152
+    },
+    {
+      "rank": 2,
+      "author": "MacLaren RE",
+      "papers": 149
+    },
+    {
+      "rank": 3,
+      "author": "Kohl S",
+      "papers": 113
+    },
+    {
+      "rank": 4,
+      "author": "Webster AR",
+      "papers": 100
+    },
+    {
+      "rank": 5,
+      "author": "Tsang SH",
+      "papers": 96
+    },
+    {
+      "rank": 6,
+      "author": "Sahel JA",
+      "papers": 80
+    },
+    {
+      "rank": 7,
+      "author": "Audo I",
+      "papers": 68
+    },
+    {
+      "rank": 8,
+      "author": "Wissinger B",
+      "papers": 66
+    },
+    {
+      "rank": 9,
+      "author": "Li Y",
+      "papers": 64
+    },
+    {
+      "rank": 10,
+      "author": "Stingl K",
+      "papers": 59
+    },
+    {
+      "rank": 11,
+      "author": "Moore AT",
+      "papers": 59
+    },
+    {
+      "rank": 12,
+      "author": "Pennesi ME",
+      "papers": 56
+    },
+    {
+      "rank": 13,
+      "author": "Hauswirth WW",
+      "papers": 56
+    },
+    {
+      "rank": 14,
+      "author": "Arno G",
+      "papers": 55
+    },
+    {
+      "rank": 15,
+      "author": "Chen FK",
+      "papers": 54
+    },
+    {
+      "rank": 16,
+      "author": "Georgiou M",
+      "papers": 53
+    },
+    {
+      "rank": 17,
+      "author": "Leroy BP",
+      "papers": 53
+    },
+    {
+      "rank": 18,
+      "author": "Zeitz C",
+      "papers": 53
+    },
+    {
+      "rank": 19,
+      "author": "Wang Y",
+      "papers": 51
+    },
+    {
+      "rank": 20,
+      "author": "Banin E",
+      "papers": 48
+    }
+  ],
+  "highlight": {
+    "author": "Michaelides M",
+    "papers": 152,
+    "rank": 1,
+    "total_authors": 17055,
+    "is_top": true
+  },
+  "top_institutions": [
+    {
+      "rank": 1,
+      "institution": "University College London (UCL)",
+      "papers": 309
+    },
+    {
+      "rank": 2,
+      "institution": "Moorfields Eye Hospital",
+      "papers": 266
+    },
+    {
+      "rank": 3,
+      "institution": "University of Oxford",
+      "papers": 211
+    },
+    {
+      "rank": 4,
+      "institution": "Sorbonne / Institut de la Vision (Paris)",
+      "papers": 150
+    },
+    {
+      "rank": 5,
+      "institution": "University of Tübingen",
+      "papers": 141
+    },
+    {
+      "rank": 6,
+      "institution": "University of Pennsylvania",
+      "papers": 139
+    },
+    {
+      "rank": 7,
+      "institution": "Harvard / Massachusetts Eye and Ear",
+      "papers": 125
+    },
+    {
+      "rank": 8,
+      "institution": "Columbia University",
+      "papers": 115
+    },
+    {
+      "rank": 9,
+      "institution": "Radboud University Nijmegen",
+      "papers": 97
+    },
+    {
+      "rank": 10,
+      "institution": "National Eye Institute (NIH)",
+      "papers": 93
+    },
+    {
+      "rank": 11,
+      "institution": "Ludwig Maximilian University Munich",
+      "papers": 89
+    },
+    {
+      "rank": 12,
+      "institution": "Oregon Health & Science University",
+      "papers": 78
+    },
+    {
+      "rank": 13,
+      "institution": "Ghent University",
+      "papers": 76
+    },
+    {
+      "rank": 14,
+      "institution": "University of Iowa",
+      "papers": 74
+    },
+    {
+      "rank": 15,
+      "institution": "University of California, San Francisco",
+      "papers": 61
+    }
+  ],
+  "top_collaborations": [
+    {
+      "a": "Michaelides M",
+      "b": "Webster AR",
+      "papers": 69
+    },
+    {
+      "a": "Kohl S",
+      "b": "Wissinger B",
+      "papers": 57
+    },
+    {
+      "a": "Georgiou M",
+      "b": "Michaelides M",
+      "papers": 50
+    },
+    {
+      "a": "Audo I",
+      "b": "Zeitz C",
+      "papers": 47
+    },
+    {
+      "a": "Audo I",
+      "b": "Sahel JA",
+      "papers": 44
+    },
+    {
+      "a": "Arno G",
+      "b": "Webster AR",
+      "papers": 42
+    },
+    {
+      "a": "MacLaren RE",
+      "b": "McClements ME",
+      "papers": 42
+    },
+    {
+      "a": "Moore AT",
+      "b": "Webster AR",
+      "papers": 39
+    },
+    {
+      "a": "Sahel JA",
+      "b": "Zeitz C",
+      "papers": 38
+    },
+    {
+      "a": "Michaelides M",
+      "b": "Moore AT",
+      "papers": 37
+    },
+    {
+      "a": "Mahroo OA",
+      "b": "Webster AR",
+      "papers": 35
+    },
+    {
+      "a": "Mahroo OA",
+      "b": "Michaelides M",
+      "papers": 35
+    },
+    {
+      "a": "Arno G",
+      "b": "Michaelides M",
+      "papers": 33
+    },
+    {
+      "a": "Robson AG",
+      "b": "Webster AR",
+      "papers": 32
+    },
+    {
+      "a": "Cideciyan AV",
+      "b": "Jacobson SG",
+      "papers": 32
+    },
+    {
+      "a": "Kohl S",
+      "b": "Stingl K",
+      "papers": 31
+    },
+    {
+      "a": "Banin E",
+      "b": "Sharon D",
+      "papers": 31
+    },
+    {
+      "a": "Cehajic-Kapetanovic J",
+      "b": "MacLaren RE",
+      "papers": 30
+    },
+    {
+      "a": "Michaelides M",
+      "b": "Robson AG",
+      "papers": 30
+    },
+    {
+      "a": "Pennesi ME",
+      "b": "Yang P",
+      "papers": 30
+    }
+  ],
+  "with_affiliation": 4462,
+  "total": 4638
+}

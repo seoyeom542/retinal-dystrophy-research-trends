@@ -102,6 +102,22 @@ def _parse_authors(article: dict) -> list[str]:
     return authors
 
 
+def _parse_affiliations(article: dict) -> list[str]:
+    """Return the unique affiliation strings listed across all authors.
+
+    PubMed records carry affiliations per author (often only for some), as free
+    text. We collect the distinct strings; institution normalisation happens in
+    the analysis stage.
+    """
+    seen: list[str] = []
+    for a in article.get("AuthorList", []):
+        for info in a.get("AffiliationInfo", []):
+            aff = str(info.get("Affiliation", "")).strip()
+            if aff and aff not in seen:
+                seen.append(aff)
+    return seen
+
+
 def _parse_abstract(article: dict) -> str:
     """Join the (possibly multi-section) abstract into one string."""
     abstract = article.get("Abstract", {}).get("AbstractText", [])
@@ -141,6 +157,7 @@ def parse_records(raw: dict, query_label: str) -> list[dict[str, Any]]:
                 "year": _parse_year(article),
                 "journal": _first_text(article.get("Journal", {}), "Title"),
                 "authors": _parse_authors(article),
+                "affiliations": _parse_affiliations(article),
                 "abstract": _parse_abstract(article),
                 "keywords": _parse_keywords(citation),
                 "query_labels": [query_label],

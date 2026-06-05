@@ -109,6 +109,7 @@ python src/fetch_pubmed.py --query cone_dystrophy
 ```bash
 python src/fetch_pubmed.py      # 1단계: 수집  -> data/raw/
 python src/analyze.py           # 2단계: 분석  -> data/processed/
+python src/analyze_authors.py   # 2단계: 저자·기관 분석 -> data/processed/author_analysis.json
 python src/visualize.py         # 3단계: 차트  -> docs/charts/, docs/assets/
 
 # 4단계: 로컬 미리보기
