@@ -178,6 +178,75 @@ a { color: var(--teal); }
   margin: 24px 0;
 }
 
+/* --- Clinical trials page --- */
+.trials-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.trials-controls button {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.trials-controls button:hover { border-color: var(--teal); color: var(--teal); }
+.trials-controls button.active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+.trials-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.trials-table th {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--teal-light);
+  color: var(--navy);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  position: sticky;
+  top: 60px;
+  background: var(--bg);
+}
+.trials-table td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.trials-table tr:hover td { background: #f0f6f9; }
+.trials-table .t-title { font-weight: 500; color: var(--text); }
+.trials-table .t-title a { color: var(--navy); text-decoration: none; }
+.trials-table .t-title a:hover { color: var(--teal); text-decoration: underline; }
+.trials-table .t-meta { color: var(--muted); font-size: 0.82rem; margin-top: 4px; }
+
+.badge-status {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 2px 9px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.st-recruiting { background: #e3f5e9; color: #1d7a43; }
+.st-active     { background: #e3eefb; color: #1f5fa8; }
+.st-completed  { background: #eceef0; color: #5b6b75; }
+.st-terminated { background: #fbe6e3; color: #b23a2a; }
+.st-other      { background: #fdf3e0; color: #8a6212; }
+
+.phase-chip {
+  display: inline-block;
+  background: var(--teal-light);
+  color: var(--navy);
+  border-radius: 5px;
+  padding: 1px 7px;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+.trials-empty { color: var(--muted); padding: 24px; text-align: center; }
+
 /* --- Footer --- */
 .footer {
   max-width: var(--maxw);

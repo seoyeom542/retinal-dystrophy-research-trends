@@ -115,6 +115,7 @@ python -m http.server 8000 --directory docs
 ```
 docs/
 ├── index.html                  # 대시보드 (히어로 + 인터랙티브 차트 5종)
+├── clinical-trials.html         # 임상시험 현황 (ClinicalTrials.gov, 상태별 필터)
 ├── about-cone-dystrophy.html    # 추체이영양증 기초 개념 설명
 ├── paper/index.html             # 논문 한국어 번역 (CC BY 표기)
 ├── paper/source/                # 원문 PDF를 두는 곳
@@ -122,6 +123,16 @@ docs/
 ├── assets/                      # 워드클라우드 등 이미지
 └── style.css
 ```
+
+### 임상시험 데이터 갱신
+
+```bash
+python src/fetch_trials.py        # ClinicalTrials.gov API v2 -> data/processed/clinical_trials.json
+python src/build_trials_page.py   # 데이터를 임베드한 docs/clinical-trials.html 생성
+```
+
+IRD 관련 8개 질환 조건과 유전자치료 중재(intervention)를 교차 검색해 임상시험을
+수집하고, 상태별 필터링이 가능한 정적 페이지로 빌드합니다.
 
 ## 데이터 출처 및 라이선스
 
