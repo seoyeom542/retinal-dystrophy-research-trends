@@ -39,6 +39,7 @@ LANGS = {
             '  <meta name="twitter:card" content="summary_large_image" />'
         ),
         "nav": {"dashboard": "대시보드", "trials": "임상시험", "basics": "기초 개념", "paper": "논문 번역"},
+        "notes_link": '<a href="notes/index.html">연구 노트</a>',
         "subtitle": "유전성 망막이영양증 유전자치료",
         "h1": "임상시험 현황",
         "hero_desc": "문헌에서 본 연구 동향이 실제 환자 치료로 이어지는 현장입니다. ClinicalTrials.gov에 등록된 유전성 망막이영양증 <strong>유전자치료 임상시험</strong>을 모았습니다.",
@@ -81,6 +82,7 @@ LANGS = {
             '  <meta name="twitter:card" content="summary_large_image" />'
         ),
         "nav": {"dashboard": "Dashboard", "trials": "Clinical trials", "basics": "Background", "paper": "Source paper"},
+        "notes_link": "",  # notes are Korean-only; omitted from the English nav
         "subtitle": "Gene therapy for inherited retinal dystrophy",
         "h1": "Clinical Trials",
         "hero_desc": "Where the research trends seen in the literature turn into patient care. A curated set of <strong>gene-therapy clinical trials</strong> for inherited retinal dystrophy, registered on ClinicalTrials.gov.",
@@ -122,6 +124,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
       <div class="nav-links">
         <a href="{root}index.html#dashboard">{nav_dashboard}</a>
         <a href="clinical-trials.html">{nav_trials}</a>
+        {notes_link}
         <a href="{root}about-cone-dystrophy.html">{nav_basics}</a>
         {paper_link}
         <a href="{en_href}" class="lang-toggle">{lang_label}</a>
@@ -254,6 +257,7 @@ def build(lang: str, L: dict, trials: list, summary: dict) -> None:
         title=L["title"],
         meta=L["meta"],
         head_extra=L["head_extra"],
+        notes_link=L["notes_link"],
         root=L["root"],
         nav_dashboard=L["nav"]["dashboard"],
         nav_trials=L["nav"]["trials"],

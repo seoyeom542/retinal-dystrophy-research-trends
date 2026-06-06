@@ -41,6 +41,7 @@ NAV = """  <nav class="nav">
         <a href="index.html">연구 노트</a>
         <a href="../about-cone-dystrophy.html">기초 개념</a>
         <a href="../paper/index.html">논문 번역</a>
+        <a href="../en/index.html" class="lang-toggle">EN</a>
       </div>
     </div>
   </nav>"""
