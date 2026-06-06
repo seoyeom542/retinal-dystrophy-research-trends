@@ -100,6 +100,10 @@ STRINGS: dict[str, dict[str, Any]] = {
 # Author to spotlight (accent-coloured) in the author chart.
 HIGHLIGHT_AUTHOR = "Michaelides M"
 
+# Horizontal legend placed BELOW the plot, clear of the title. Putting it above
+# (y>1) makes the clickable legend overlap the chart title, hiding it.
+LEGEND_BELOW = dict(orientation="h", yanchor="top", y=-0.28, x=0.5, xanchor="center")
+
 
 def _load(name: str) -> Any:
     return json.loads((config.PROCESSED_DIR / name).read_text())
@@ -167,7 +171,8 @@ def chart_yearly_trend(lang: str, s: dict) -> None:
             s["yearly_title"],
             xaxis_title=s["yearly_x"],
             yaxis_title=s["yearly_y"],
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0),
+            legend=LEGEND_BELOW,
+            margin=dict(l=70, r=30, t=60, b=95),
         )
     )
     _save(fig, lang, "yearly_trend.html")
@@ -249,7 +254,8 @@ def chart_treatment_over_time(lang: str, s: dict, start_year: int = 2005) -> Non
             s["treat_time_title"],
             xaxis_title=s["treat_time_x"],
             yaxis_title=s["treat_y"],
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0),
+            legend=LEGEND_BELOW,
+            margin=dict(l=70, r=30, t=60, b=120),
         )
     )
     _save(fig, lang, "treatment_over_time.html")
