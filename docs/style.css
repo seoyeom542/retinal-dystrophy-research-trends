@@ -256,6 +256,12 @@ a { color: var(--teal); }
 .trials-empty { color: var(--muted); padding: 24px; text-align: center; }
 
 /* --- Research notes --- */
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.note-grid .note-card { margin-bottom: 0; }
 .note-card {
   display: block;
   background: var(--card);

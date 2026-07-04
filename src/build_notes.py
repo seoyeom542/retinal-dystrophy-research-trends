@@ -31,6 +31,10 @@ import config
 NOTES_SRC = config.PROJECT_ROOT / "notes"
 NOTES_OUT = config.PROJECT_ROOT / "docs" / "notes"
 
+# The dashboard shows the latest notes between these markers (auto-filled below).
+DASHBOARD = config.PROJECT_ROOT / "docs" / "index.html"
+DASHBOARD_LIMIT = 6
+
 # Shared nav used on every note page and the index (sits at docs/notes/).
 NAV = """  <nav class="nav">
     <div class="nav-inner">
@@ -195,6 +199,40 @@ def build_index(notes: list[dict]) -> None:
     (NOTES_OUT / "index.html").write_text(page)
 
 
+def inject_dashboard(notes: list[dict]) -> None:
+    """Fill the dashboard's notes section (between markers) with latest notes.
+
+    Keeps the homepage note cards in sync automatically whenever notes change.
+    Links are relative to docs/ (notes/<slug>.html).
+    """
+    if not DASHBOARD.exists():
+        return
+    doc = DASHBOARD.read_text()
+    pattern = re.compile(r"(<!-- NOTES:START[^\n]*-->)(.*?)(<!-- NOTES:END -->)", re.DOTALL)
+    if not pattern.search(doc):
+        print("  (dashboard notes markers not found; skipped)")
+        return
+
+    latest = sorted(notes, key=lambda n: n["date"], reverse=True)[:DASHBOARD_LIMIT]
+    cards = []
+    for n in latest:
+        tag_html = ""
+        if n["tags"]:
+            chips = " ".join(f'<span class="phase-chip">#{html.escape(t)}</span>' for t in n["tags"])
+            tag_html = f'<div style="margin-top:8px">{chips}</div>'
+        cards.append(
+            f'''        <a class="note-card" href="notes/{n["slug"]}.html">
+          <div class="note-date">{html.escape(n["date"])}</div>
+          <div class="note-title">{html.escape(n["title"])}</div>
+          <div class="note-summary">{html.escape(n["summary"])}</div>{tag_html}
+        </a>'''
+        )
+    block = "\n".join(cards)
+    new_doc = pattern.sub(lambda m: f"{m.group(1)}\n{block}\n        {m.group(3)}", doc)
+    DASHBOARD.write_text(new_doc)
+    print(f"  updated docs/index.html notes section ({len(latest)} notes)")
+
+
 def main() -> None:
     NOTES_OUT.mkdir(parents=True, exist_ok=True)
     sources = sorted(NOTES_SRC.glob("*.md"))
@@ -203,6 +241,7 @@ def main() -> None:
         print(f"  wrote docs/notes/{n['slug']}.html")
     build_index(notes)
     print(f"  wrote docs/notes/index.html ({len(notes)} notes)")
+    inject_dashboard(notes)
 
 
 if __name__ == "__main__":
